@@ -1,0 +1,24 @@
+{
+  "name": "TicketAI",
+  "author": {
+    "name": "Sam Potashnick",
+    "email": "sam.potashnick@deel.com"
+  },
+  "defaultLocale": "en",
+  "private": true,
+  "location": {
+    "support": {
+      "ticket_sidebar": {
+        "url": "assets/iframe.html",
+        "flexible": true
+      },
+      "modal": {
+        "url": "assets/modal.html",
+        "flexible": true
+      }
+    }
+  },
+  "permissions": ["tickets:write"],
+  "version": "1.0.0",
+  "frameworkVersion": "2.0"
+}

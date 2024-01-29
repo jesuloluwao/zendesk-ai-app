@@ -1,0 +1,11 @@
+{
+    "sandbox": {
+      "customFieldKey": "ticket.customField:custom_field_21830302707985",
+      "hostname": "letsdeel1689094227.zendesk.com"
+    },
+    "production": {
+      "customFieldKey": "ticket.customField:custom_field_20662484235409",
+      "hostname": "letsdeel.zendesk.com"
+    }
+  }
+  

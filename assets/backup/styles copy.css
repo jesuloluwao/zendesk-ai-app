@@ -1,0 +1,48 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+ 
+  body, html, ion-card {
+    overflow-x: hidden;
+  }
+  
+
+ion-item {
+    --padding-start: 6px; /* Adjust left padding */
+    --padding-end: 2px; /* Adjust right padding */
+    --inner-padding-end: 0px; /* Adjust right padding inside the item */
+    margin-bottom: 4px; /* Space between items */
+    font-size: 13px; /* Adjust font size as needed */
+    line-height: 1.4; /* Adjust line height as needed */
+  }
+
+  ion-card {
+    box-sizing: border-box;
+    width: 100%; /* Full width */
+    max-width: 100%; /* Prevents the element from extending beyond 100% */
+    margin-right: 2; /* Adjust as necessary */
+    margin-left: 6; /* Adjust as necessary */
+  }
+  
+  /* Specific adjustments if needed */
+  ion-card {
+    padding-right: 0; /* Adjust as necessary */
+    padding-left: 0; /* Adjust as necessary */
+  }
+  
+
+  .modal-content {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  @media (max-width: 500px) { /* Adjust the max-width as necessary */
+    ion-alert {
+      width: 100%;
+      min-width: 0; /* Overrides any minimum width */
+    }
+  }
+  
+  
+  
+  

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SupportAI</title>
+    
+    <!-- Include Zendesk Garden CSS for consistency with Zendesk UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7,npm/@zendeskgarden/css-utilities@4">
+    
+    <!-- Include Ionic CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.min.css" rel="stylesheet">
+    
+    <!-- If you are using any Ionic JavaScript components that require JS -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+  
+    <!-- Include your custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+  
+<body>
+  
+  <ion-card id="empty-summary-card" style="display: none;">
+    <ion-card-content>
+      Nothing to see here! <br>Click below to generate a new summary. ✏️
+    </ion-card-content>
+  </ion-card>
+  
+
+  <div id="ai-summary"></div>
+
+  
+  <ion-button id="get-summary-btn">Get Summary</ion-button>
+  <ion-button id="alicia-btn">Alicia</ion-button>
+
+  <!-- Include ZAF SDK and your JavaScript file -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

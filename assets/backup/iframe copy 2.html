@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TicketAI</title>
+    
+    <!-- Include Zendesk Garden CSS for consistency with Zendesk UI -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7,npm/@zendeskgarden/css-utilities@4">
+    
+    <!-- Include Ionic CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.min.css" rel="stylesheet">
+    
+    <!-- If you are using any Ionic JavaScript components that require JS -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@latest/dist/ionic/ionic.esm.js"></script>
+  
+    <!-- Include your custom styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+  
+<body>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ticket Summary</ion-card-title>
+    </ion-card-header>
+    <ion-card-content id="ai-summary">
+      <!-- AI Summary will be inserted here -->
+    </ion-card-content>
+  </ion-card>
+
+
+  
+  <ion-button id="get-summary-btn">Get Summary</ion-button>
+
+<!-- Overlay Modal using Ionic -->
+<ion-modal id="summary-modal">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Summary</ion-title>
+      <ion-buttons slot="primary">
+        <ion-button onclick="closeModal()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <p>Click 'Save as...' to get summary.</p>
+  </ion-content>
+</ion-modal>
+
+  <!-- Include ZAF SDK and your JavaScript file -->
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+
+  
+
+ion-item {
+    --padding-start: 4px; /* Adjust left padding */
+    --padding-end: 0px; /* Adjust right padding */
+    --inner-padding-end: 0px; /* Adjust right padding inside the item */
+    margin-bottom: 4px; /* Space between items */
+    font-size: 13px; /* Adjust font size as needed */
+    line-height: 1.4; /* Adjust line height as needed */
+    margin-right: 4px;
+    margin-left: 4px;
+
+  }
+  
+  ion-button {
+    margin-right: 10px;
+    margin-left: 4px;
+  }
+
+ion-card {
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+  .modal-content {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  
+  
+  
+  

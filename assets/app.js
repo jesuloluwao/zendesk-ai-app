@@ -27,7 +27,7 @@ function fetchAiSummary() {
         if (emptySummaryCard) emptySummaryCard.style.display = 'none';
       }
     });
-  }
+}
   
   
 
@@ -38,17 +38,17 @@ function addSummaryTag() {
     }).catch(function(error) {
       console.error('Error adding tag:', error);
     });
-  }
+}
   
 
-  function showToast() {
-    var toast = document.getElementById('summary-toast');
-    if (toast) {
-      toast.present();
-    } else {
-      console.error('Toast element not found');
-    }
+function showToast() {
+  var toast = document.getElementById('summary-toast');
+  if (toast) {
+    toast.present();
+  } else {
+    console.error('Toast element not found');
   }
+}
     
   function showAlert() {
     const alert = document.createElement('ion-alert');
@@ -58,7 +58,7 @@ function addSummaryTag() {
   
     document.body.appendChild(alert);
     return alert.present();
-  }
+}
   
 
 function showModal() {
@@ -94,8 +94,40 @@ function triggerZapierFlow() {
           console.error('Error triggering Zapier flow', error);
         });
     });
-  }
-  
+}
+
+function makeServerSideRequest() {
+// Get the current ticket ID
+client.get('ticket.id').then(function(data) {
+    var ticketId = data['ticket.id'];
+
+    // Construct the payload
+    var payload = {
+        ticket_id: ticketId
+    };
+
+    // Set up the request settings
+    var settings = {
+        url: 'https://hooks.zapier.com/hooks/catch/15220032/3w8sprq/',
+        type: 'POST',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(payload),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+
+    // Make the server-side request
+    client.request(settings).then(function(response) {
+        console.log('success'); // Print "success" to the console log
+        // handle successful response
+    }).catch(function(error) {
+        console.log('error'); // Print "error" to the console log
+        // handle error response
+    });
+});
+}
   
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -110,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var getZapSummaryButton = document.querySelector('ion-button#zap-summary-btn');
     if (getZapSummaryButton) {
-      getZapSummaryButton.addEventListener('click', triggerZapierFlow);
+      getZapSummaryButton.addEventListener('click', makeServerSideRequest);
     } else {
       console.error('Get Summary button not found');
     }
